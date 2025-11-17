@@ -8,4 +8,4 @@ st.write("Please enter the monthly sales target and select the region.")
 target = st.number_input("Enter monthly sales target(in USD)",min_value = 0,max_value = 1000000,value = 50000)
 region = st.selectbox("Select Region",["North","East","South","West"])
 if st.button("Submit"):
-  st.success(f"Input successfully! Your monthly sales target is {target} in {region} Region! ")
+  st.success(f"Input successfully! Your monthly sales target is ${target} in {region} Region! ")
