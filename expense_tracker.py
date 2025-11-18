@@ -14,16 +14,16 @@ with st.form("espense_form"):
   amount = st.number_input("Amount", min_value = 0.0, step = 0.01)
   description = st.text_input("Description")
 
-submitted = st.form_submit_button("Add Expense")
-if submitted:
-  new_expense = pd.DataFraame({
-    'Date': [date],
-    'Category': [category],
-    'Amount': [amount],
-    'Description': [description]
-  })
-st.session_state.expenses = pd.concat([st.session_state.espenses,new_expense], ignore_index=True)
-st.success("Expense Added Successfully!")
+  submitted = st.form_submit_button("Add Expense")
+  if submitted:
+      new_expense = pd.DataFraame({
+        'Date': [date],
+        'Category': [category],
+        'Amount': [amount],
+        'Description': [description]
+      })
+    st.session_state.expenses = pd.concat([st.session_state.espenses,new_expense], ignore_index=True)
+    st.success("Expense Added Successfully!")
 
 if not st.session_state.expenses.empty:
   st.subheader("Your Expenses")
