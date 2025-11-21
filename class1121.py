@@ -5,7 +5,11 @@ import time
 st.title("Business Dashboard with Streamlit Layouts")
 
 # Objective
+# represent multiple objectives
 st.write("Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard.")
+# "##" is called markdown to format the text
+msg = " ## Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard."
+st.write(msg)
 
 # Columns Layout
 col1, col2, col3 = st.columns(3)
