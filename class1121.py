@@ -50,8 +50,7 @@ with tab2:
     for feedback in customer_feedback:
         # "-" is a markdown which is a bullet
         st.write(f"- {feedback}")
-    for feedback in customer_feedback:
-        for i in range(3):
+    for feedback in customer_feedback and i in range(3):
             st.write(f"{i+1}. {feedback}")
 with tab3:
     st.write("Content for Market Trends")
