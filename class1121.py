@@ -8,12 +8,15 @@ st.title("Business Dashboard with Streamlit Layouts")
 # represent multiple objectives
 st.write("Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard.")
 # "##" is called markdown to format the text
-msg = " ## Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard."
+msg = " ## bold 加粗"
 st.write(msg)
 
 # Columns Layout
+# create layout with 3 columns, the number inside is the number of columns
 col1, col2, col3 = st.columns(3)
 with col1:
+    # header of the column
+    # disadvantage of streamlit, it is not so flexibility, we can't control everything like the size of header
     st.header("Q1 2024")
     st.write("Revenue: $1.2M")
 with col2:
@@ -24,6 +27,7 @@ with col3:
     st.write("Revenue: $1.3M")
 
 # Tabs Layout
+# when you create a tab, you nneed to use a list
 tab1, tab2, tab3 = st.tabs(["Sales Data", "Customer Insights", "Market Trends"])
 with tab1:
     st.write("Content for Sales Data")
@@ -34,6 +38,7 @@ with tab1:
         "Q4 2024": "$1.6M"
     }
     for quarter, revenue in sales_data.items():
+        # key: quarter; value: revenue
         st.write(f"{quarter}: {revenue}")
 with tab2:
     st.write("Content for Customer Insights")
@@ -43,7 +48,11 @@ with tab2:
         "Quick delivery and excellent support."
     ]
     for feedback in customer_feedback:
+        # "-" is a markdown which is a bullet
         st.write(f"- {feedback}")
+    for feedback in customer_feedback:
+        for i in range(3):
+            st.write(f"{i+1}. {feedback}")
 with tab3:
     st.write("Content for Market Trends")
     market_trends = {
