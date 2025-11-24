@@ -1,5 +1,6 @@
 streamlit
-pandas
+pandas # dataframe come from pandas
 # 記得不要copy".pyplot"
 matplotlib
 numpy
+streamlit_option_menu
