@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 # Step 3: Generate Random Sales Data
+# generate a lot of random data from 100 to all smaller than 100and times 1000
 sales_data = np.random.rand(100) * 1000
 
 # Step 4: Create a DataFrame
@@ -22,6 +23,7 @@ df = pd.DataFrame({
 # Step 5: Visualize Sales Data
 
 # Display DataFrame using st.dataframe
+# show the title and the dataframe
 st.markdown("### Product Sales and Customer Data")
 st.dataframe(df)  # Interactive table with sorting and resizing
 
